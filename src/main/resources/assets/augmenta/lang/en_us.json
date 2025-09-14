@@ -1,0 +1,13 @@
+{
+  "itemGroup.augmenta": "Example Mod Tab",
+  "block.augmenta.example_block": "Example Block",
+  "item.augmenta.example_item": "Example Item",
+
+  "augmenta.configuration.title": "Augmenta Configs",
+  "augmenta.configuration.section.augmenta.common.toml": "Augmenta Configs",
+  "augmenta.configuration.section.augmenta.common.toml.title": "Augmenta Configs",
+  "augmenta.configuration.items": "Item List",
+  "augmenta.configuration.logDirtBlock": "Log Dirt Block",
+  "augmenta.configuration.magicNumberIntroduction": "Magic Number Text",
+  "augmenta.configuration.magicNumber": "Magic Number"
+}
