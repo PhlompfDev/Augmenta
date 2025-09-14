@@ -74,7 +74,7 @@ public class Augmenta {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        LOGGER.info("HELLO FROM COMMON SETUP");
+        LOGGER.info("HELLO FROM COMMON SETUP 1");
 
         if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
             LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
