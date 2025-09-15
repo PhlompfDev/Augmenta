@@ -43,8 +43,8 @@ public class Augmenta {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
     // Blocks (and their items)
-    public static final DeferredBlock<Block> AUGMENTER = BLOCKS.registerSimpleBlock("augmenter", BlockBehaviour.Properties.of().mapColor(MapColor.STONE));
-    public static final DeferredItem<BlockItem> AUGMENTER_ITEM = ITEMS.registerSimpleBlockItem("augmenter", AUGMENTER);
+    public static final DeferredBlock<Block> AUGMENTER = BLOCKS.registerSimpleBlock("augmenter_block", BlockBehaviour.Properties.of().mapColor(MapColor.STONE));
+    public static final DeferredItem<BlockItem> AUGMENTER_ITEM = ITEMS.registerSimpleBlockItem("augmenter_block", AUGMENTER);
 
     // Register items in the creative tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("augmenta", () -> CreativeModeTab.builder()

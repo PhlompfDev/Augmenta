@@ -1,7 +1,6 @@
 {
-  "itemGroup.augmenta": "Example Mod Tab",
-  "block.augmenta.example_block": "Example Block",
-  "item.augmenta.example_item": "Example Item",
+  "itemGroup.augmenta": "Augmenta",
+  "block.augmenta.augmenter_block": "Augmenter",
 
   "augmenta.configuration.title": "Augmenta Configs",
   "augmenta.configuration.section.augmenta.common.toml": "Augmenta Configs",
