@@ -1,5 +1,7 @@
 package com.pp.augmenta;
 
+import com.pp.augmenta.item.ModCreativeModeTabs;
+
 import com.pp.augmenta.block.ModBlocks;
 import com.pp.augmenta.item.ModItems;
 import org.slf4j.Logger;
