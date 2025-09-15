@@ -16,10 +16,19 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Augmenta.MODID);
 
+    public static final Supplier<CreativeModeTab> AUGMENTA_ITEMS_TAB = CREATIVE_MODE_TAB.register("augmenta_items_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.AUGMENTER.get()))
+                    .title(Component.translatable("Augmenta Items"))
+                    .displayItems((itemDisplayParameters, output) -> {
+
+//                        output.accept(ModItems.GECKO_SPAWN_EGG); // Placeholder
+
+                    }).build());
+
     public static final Supplier<CreativeModeTab> AUGMENTA_BLOCK_TAB = CREATIVE_MODE_TAB.register("augmenta_blocks_tab",
-        () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.AUGMENTER))
+        () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.AUGMENTER.get()))
             .withTabsBefore(ResourceLocation.fromNamespaceAndPath(Augmenta.MODID, "augmenta_items_tab"))
-            .title(Component.translatable("creativetab.augmenta.augmenta_blocks"))
+            .title(Component.translatable("Augmenta Blocks"))
             .displayItems((itemDisplayParameters, output) -> {
                 output.accept(ModBlocks.AUGMENTER.get());
 
