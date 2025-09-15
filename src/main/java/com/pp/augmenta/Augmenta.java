@@ -1,5 +1,7 @@
 package com.pp.augmenta;
 
+import com.pp.augmenta.block.ModBlocks;
+import com.pp.augmenta.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -35,34 +37,15 @@ public class Augmenta {
     public static final String MODID = "augmenta";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    // Block Register
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
-    public static final DeferredRegister.Items  ITEMS  = DeferredRegister.createItems(MODID);
-
-    // Creative Tab Registry
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
-
-    // Blocks (and their items)
-    public static final DeferredBlock<Block> AUGMENTER = BLOCKS.registerSimpleBlock("augmenter_block", BlockBehaviour.Properties.of().mapColor(MapColor.STONE));
-    public static final DeferredItem<BlockItem> AUGMENTER_ITEM = ITEMS.registerSimpleBlockItem("augmenter_block", AUGMENTER);
-
-    // Register items in the creative tab
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("augmenta", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.augmenta"))
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> AUGMENTER_ITEM.get().getDefaultInstance())
-            .displayItems((parameters, output) -> {
-                output.accept(AUGMENTER_ITEM.get());
-            }).build());
-
     // First code that is run when mod is loaded.
     public Augmenta(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
         // Finalize Registries
-        BLOCKS.register(modEventBus);
-        ITEMS.register(modEventBus);
-        CREATIVE_MODE_TABS.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         NeoForge.EVENT_BUS.register(this);
@@ -80,8 +63,9 @@ public class Augmenta {
 
     // Add items to the creative tab group
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(AUGMENTER_ITEM);
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+//            event.accept(ModBlocks.BISMUTH_BLOCK);
+//            event.accept(ModBlocks.BISMUTH_ORE);
         }
     }
 

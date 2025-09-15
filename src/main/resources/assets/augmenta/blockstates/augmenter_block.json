@@ -1,5 +1,19 @@
 {
   "variants": {
-    "": { "model": "augmenta:block/augmenter_block"}
+    "facing=north": {
+      "model": "augmenta:block/augmenter_block"
+    },
+    "facing=south": {
+      "model": "augmenta:block/augmenter_block",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "augmenta:block/augmenter_block",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "augmenta:block/augmenter_block",
+      "y": 270
+    }
   }
 }
