@@ -1,12 +1,6 @@
 {
-  "itemGroup.augmenta": "Augmenta",
   "block.augmenta.augmenter_block": "Augmenter",
-
-  "augmenta.configuration.title": "Augmenta Configs",
-  "augmenta.configuration.section.augmenta.common.toml": "Augmenta Configs",
-  "augmenta.configuration.section.augmenta.common.toml.title": "Augmenta Configs",
-  "augmenta.configuration.items": "Item List",
-  "augmenta.configuration.logDirtBlock": "Log Dirt Block",
-  "augmenta.configuration.magicNumberIntroduction": "Magic Number Text",
-  "augmenta.configuration.magicNumber": "Magic Number"
+  "menu.augmenta.augmenter": "Augmenter",
+  "commands.augmenta.set": "Set augment slot %1$s for %2$s to %3$s.",
+  "commands.augmenta.clear": "Cleared augment slot %1$s for %2$s."
 }
