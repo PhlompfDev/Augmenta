@@ -19,7 +19,11 @@ public class ModBlocks {
 
     // BLOCKS
     public static final DeferredBlock<Block> AUGMENTER = registerBlock("augmenter_block",
-            () -> new AugmenterBlock(BlockBehaviour.Properties.of().noCollission()));
+            () -> new AugmenterBlock(BlockBehaviour.Properties
+                    .of()
+                    .strength(4.0f, 6.0f)
+                    .requiresCorrectToolForDrops()
+            ));
 
     // METHODS
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
